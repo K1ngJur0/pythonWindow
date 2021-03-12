@@ -2,6 +2,8 @@ import pygame
 import object as obj
 import transform as location
 
+import sound as snd
+
 pygame.init()
 
 def createWindow():
@@ -26,5 +28,7 @@ def gameLoop():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     print("Up")
+                    snd.soundLaser.play()
+
 
         pygame.display.flip()
